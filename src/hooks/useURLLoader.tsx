@@ -10,6 +10,7 @@ const useURLLoader = (url: string, deps: any[] = []) => {
 		setLoading(true)
 		axios.get(url).then(result => {
 			setData(result.data)
+			setLoading(false)
 		})
 	}, deps)
 
